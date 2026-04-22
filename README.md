@@ -1,86 +1,90 @@
-Smart File Submission System
+# 🚀 Smart File Submission System
 
-A role-based Laravel web application for secure file submission, admin approval workflow, and real-time notification management.
+> A Laravel-based role-based file submission system with admin approval workflow, notifications, and real-time UI updates.
 
-🚀 Overview
+---
 
-The Smart File Submission System is designed to manage file uploads with proper validation, admin moderation, and automated notifications. It demonstrates a full backend workflow using Laravel, including authentication, authorization, events, and database-driven notifications.
+## 📌 Project Overview
 
-🎯 Key Features
-👤 User Features
-Secure user registration and login
-File submission with validation
-View submission status (Pending / Approved / Rejected)
-Real-time notification updates
-Notification history page
-🛡️ Admin Features
-Dedicated admin dashboard
-View all user submissions
-Approve or reject files
-Trigger automatic notifications on status change
-Role-based access control (admin-only routes)
-⚙️ Tech Stack
-Laravel 12
-PHP 8+
-MySQL
-Blade Templates
-Tailwind CSS
-JavaScript (AJAX for live updates)
-🔐 Security System
-Authentication using Laravel Breeze
-Middleware-based route protection
-Admin-only access using is_admin field
-CSRF protection on all forms
-File validation before upload
-📂 Core Modules
-1. File Submission System
+The **Smart File Submission System** is a full-stack Laravel application designed to manage secure file submissions with admin moderation and automated notifications.
 
-Users can upload files which are validated on both frontend and backend before being stored securely.
+It is built to demonstrate core backend concepts including:
 
-2. Admin Approval Workflow
+- 🧾 Form Validation (user input validation on frontend + backend)
+- 📁 File Validation (type, size, and secure upload handling)
+- ⚡ Event-Driven Architecture (submission status updates trigger events & notifications)
 
-Admins review submissions and decide whether to approve or reject them.
+---
 
-3. Notification System
+## ✨ Key Features
 
-When admin updates a submission:
+### 👤 User Side
+- Secure authentication system
+- File submission with validation
+- Real-time status updates
+- Notification system (bell icon + full page view)
 
-A database notification is created
-User sees notification in bell icon
-Notification list updates dynamically
-4. Role-Based Access Control
-Normal users → Dashboard only
-Admin users → Dashboard + Admin panel
-🔄 System Workflow
-User registers/login
-User uploads file
-Backend validates file
-File stored in system
-Admin reviews submission
-Admin approves/rejects file
-Notification is generated
-User sees update in real-time UI
-🔔 Notification System
-Bell icon with unread count badge
-Dropdown preview of latest notifications
-Full notification page
-AJAX-based live updates every few seconds
-📊 Project Highlights
-Clean MVC architecture
-Event-driven notification system
-Secure admin panel
-Real-time UI updates
-Scalable Laravel structure
-🚀 Future Improvements
-WebSocket-based real-time notifications (Laravel Reverb / Pusher)
-File preview system
-Advanced admin analytics dashboard
-Email notification integration
-Activity logs for users and admins
-👨‍💻 Developer
+### 🛡️ Admin Side
+- Admin dashboard for managing submissions
+- Approve / Reject files
+- Trigger automatic user notifications
 
-Mariam Fatima
+---
 
-📌 Note
+## 🔔 Notification System
 
-This project was built as a complete backend workflow system to demonstrate secure file submission, admin moderation, and event-based notifications using Laravel.
+- Database-based notifications
+- Bell icon with unread badge counter
+- Dropdown preview (latest notifications)
+- Full notifications page
+- Live updates using AJAX polling
+
+---
+
+## ⚙️ Tech Stack
+
+- Laravel 12
+- PHP 8+
+- MySQL
+- Blade Templates
+- Tailwind CSS
+- JavaScript (AJAX)
+
+---
+
+## 🔐 Security & Validation
+
+- Form validation (server-side + client-side)
+- File validation (type, size, integrity checks)
+- Middleware-based admin protection
+- Role-based access control (`is_admin`)
+- CSRF protection for all forms
+
+---
+
+## 🔄 System Workflow
+
+1. User registers/login  
+2. User submits file (validated form + file rules)  
+3. System stores file securely  
+4. Event is triggered on submission  
+5. Admin reviews file  
+6. Admin approves/rejects submission  
+7. Notification is generated automatically  
+8. User sees update in real-time UI  
+
+---
+
+## 📈 Future Improvements
+
+- WebSocket real-time notifications (Laravel Reverb / Pusher)
+- File preview system
+- Advanced admin analytics dashboard
+- Email notification integration
+- Activity logs for users and admins
+
+---
+
+## 👨‍💻 Developer
+
+**Mariam Fatima**
